@@ -4,13 +4,15 @@
   "description": "back_test codes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node maria_db.js",
     "start": "node index.js"
   },
   "author": "angerscroll",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mariadb": "^3.0.1"
   },
-  "type":"module"
+  "type": "module"
 }

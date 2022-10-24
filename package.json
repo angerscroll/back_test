@@ -4,8 +4,8 @@
   "description": "back_test codes",
   "main": "index.js",
   "scripts": {
-    "test": "node maria_db.js",
-    "start": "node index.js"
+    "test": "node src/persistence/maria_db.js",
+    "start": "node src/index.js"
   },
   "author": "angerscroll",
   "license": "ISC",

@@ -18,23 +18,17 @@ const init = async () => {
     connectionLimit: 5
   });
   
-  pool.getConnection()
-  .then(conn => {
-    conn.query("SELECT 1 AS val")
-    .then(rows => {
-      console.log(rows);
-      console.log("연결 확인 성공");
-    })
-    .then(res => {
-      console.log(res);
-      conn.end();
-    })
-    .catch(err => {
-      console.log(err);
-      conn.end();
-    })
-  })
-  .catch(err => {});
+  let conn;
+  try{
+    conn = await pool.getConnection();
+    const rows = await conn.query("SELECT 1 AS val");
+    console.log(rows);
+
+  } catch(err){
+      throw err;
+  } finally {
+    if(conn) return conn.end();
+  }
 }
 
 export {init};

@@ -5,7 +5,7 @@ dotenv.config();
 
 let pool;
 
-const init = () => {
+const init = async () => {
 
   const password = process.env.MARIA_DB_PASSWORD;
   const host = process.env.MARIA_DB_HOST;

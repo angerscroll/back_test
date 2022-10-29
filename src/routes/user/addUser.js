@@ -4,4 +4,4 @@ const addUser = async () => {
   await insertUser();
 }
 
-export {addUser};
+export default addUser;

@@ -1,6 +1,7 @@
+import getUsers from "./getUsers.js";
+import addUser from "./addUser.js";
 import updateUser from "./updateUser.js";
-import { addUser } from "./addUser.js";
+import deleteUser from "./deleteUser.js";
 
 
-
-export {updateUser, addUser};
+export {getUsers, addUser, updateUser, deleteUser};
